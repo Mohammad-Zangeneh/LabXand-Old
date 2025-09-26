@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E0EBE035-4A74-4B01-A309-B239927CE932}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LabXand.DomainLayer.Core</RootNamespace>
+    <AssemblyName>LabXand.DomainLayer.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entity\DomainEntityBase.cs" />
+    <Compile Include="Entity\InvalidDomainException.cs" />
+    <Compile Include="Entity\Design\ITracableAndVersioningSuportedEntity.cs" />
+    <Compile Include="Entity\Design\ITraceData.cs" />
+    <Compile Include="Entity\Design\IVersioningSupportedEntity.cs" />
+    <Compile Include="Entity\TracableDomainEntityBase.cs" />
+    <Compile Include="Entity\VersioningSupportedEntity.cs" />
+    <Compile Include="Event\Bus.cs" />
+    <Compile Include="Event\IHandler.cs" />
+    <Compile Include="Repository\ISecurityEnabledRepository.cs" />
+    <Compile Include="Service\ISecurityEnabledDomainService.cs" />
+    <Compile Include="Service\IDomainServiceWithRepository.cs" />
+    <Compile Include="Service\IDomainService.cs" />
+    <Compile Include="Entity\Design\IDomainEvent.cs" />
+    <Compile Include="Entity\Design\IDomainEntity.cs" />
+    <Compile Include="Event\IEventHandler.cs" />
+    <Compile Include="Event\IEventDispatcher.cs" />
+    <Compile Include="Service\IReadOnlyDomainWithRepositoryService.cs" />
+    <Compile Include="Service\IReadOnlyDomainService.cs" />
+    <Compile Include="Repository\IRepository.cs" />
+    <Compile Include="Repository\IRowRestrictionSpecification.cs" />
+    <Compile Include="Service\ISecurityEnabledReadOnlyService.cs" />
+    <Compile Include="Service\ISecurityEnabledService.cs" />
+    <Compile Include="Service\IServiceValidator.cs" />
+    <Compile Include="Entity\Design\ITracableEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\IVersioningSupportedService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\LabXand.ModelingProject\IMas.VesselFlag.LayerDiagram.layerdiagram">
+      <Link>IMas.VesselFlag.LayerDiagram.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LabXand.Core\LabXand.Core.csproj">
+      <Project>{e5b58f8f-b856-4f5d-a29f-736bceee1b9d}</Project>
+      <Name>LabXand.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LabXand.Security.Core\LabXand.Security.Core.csproj">
+      <Project>{df2432a3-c235-415c-b035-972406a632f5}</Project>
+      <Name>LabXand.Security.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.11.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.11.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "C:\Libs\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

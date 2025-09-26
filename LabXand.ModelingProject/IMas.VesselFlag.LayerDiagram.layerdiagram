@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="e3499ea7-674a-4a00-ac73-287e949d9587" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="704cf539-a1b1-42e0-904d-c13c056ccf1c" name="Application Service">
+      <childLayers>
+        <layer Id="01a2c965-7188-44d8-8d68-6b20a8f2c740" name="Data Contract" />
+        <layer Id="b58e1907-4dc9-4af0-afd1-fc6af20fe0be" name="Service Contract">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="6df7d97f-486c-4203-a1ad-950659946721" direction="Forward">
+              <layerMoniker Id="01a2c965-7188-44d8-8d68-6b20a8f2c740" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="ef5d2c8d-2524-428c-9dc0-94b5aea416e7" name="Service Implementation">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="bf1751b8-94da-48d4-b5b0-082c96a046ae" direction="Forward">
+              <layerMoniker Id="01a2c965-7188-44d8-8d68-6b20a8f2c740" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="16bab874-f7da-4638-a81c-75b54d6cc391" direction="Forward">
+              <layerMoniker Id="6fb61f85-efce-4ca1-a415-6c5f77ab8661" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="626b6599-b1ad-4174-8034-ec75ea0d42ca" direction="Forward">
+              <layerMoniker Id="a7a24ba2-d68e-4de0-a44d-0a9403f518d2" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="8d350e1b-4f08-43d2-874a-820d9461214e" direction="Forward">
+              <layerMoniker Id="b58e1907-4dc9-4af0-afd1-fc6af20fe0be" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="7c498cd6-b73b-4e9f-aa1f-a0a6ab7a1567" name="Service Api">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="57a588dd-f0e5-4496-924c-ffec681f404b" direction="Forward">
+              <layerMoniker Id="01a2c965-7188-44d8-8d68-6b20a8f2c740" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="9e07654a-eada-4688-955d-7458b891595e" direction="Forward">
+              <layerMoniker Id="b58e1907-4dc9-4af0-afd1-fc6af20fe0be" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="39d85d94-e7ce-4b21-ae19-5f6a4c42a7c2" name="Client Proxy">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="16b51418-6bb2-4854-aae3-940fb5199097" direction="Forward">
+              <layerMoniker Id="b58e1907-4dc9-4af0-afd1-fc6af20fe0be" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="9cf4eeaf-4aea-4879-85de-d7921ce4ecac" direction="Forward">
+              <layerMoniker Id="01a2c965-7188-44d8-8d68-6b20a8f2c740" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+      </childLayers>
+    </layer>
+    <layer Id="4a3a71ae-8bab-4cf3-8135-4957a1ef751d" name="Domain Layer">
+      <childLayers>
+        <layer Id="a7a24ba2-d68e-4de0-a44d-0a9403f518d2" name="Domain Model" />
+        <layer Id="6fb61f85-efce-4ca1-a415-6c5f77ab8661" name="Domain Service Interface">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="eb119b8a-d66f-4605-8b79-10854f284c7d" direction="Forward">
+              <layerMoniker Id="a7a24ba2-d68e-4de0-a44d-0a9403f518d2" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="5aa3450d-2f6b-4476-bcb2-793c726e9362" direction="Forward">
+              <layerMoniker Id="8a7e8182-3993-42bd-85c3-0ab13170db2f" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="fcbc1544-2bf0-41ea-9f76-86ce7b56ac4e" direction="Forward">
+              <layerMoniker Id="627c3784-efcf-4b09-b335-eb186949a7be" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="627c3784-efcf-4b09-b335-eb186949a7be" name="Domain Service Implementation" />
+      </childLayers>
+    </layer>
+    <layer Id="4355351d-78b2-444a-9c8b-18aeb2162219" name="Persistance Infrastructure">
+      <childLayers>
+        <layer Id="347218dc-ad3e-4b04-854a-fe25f558a4b7" name="Data Context" />
+        <layer Id="8a7e8182-3993-42bd-85c3-0ab13170db2f" name="Repository Interface">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="e06b721a-9a4a-427b-b325-62dbd1efbd14" direction="Forward">
+              <layerMoniker Id="347218dc-ad3e-4b04-854a-fe25f558a4b7" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="8e74c6ef-9502-4b97-84db-9e7f45ae065c" direction="Forward">
+              <layerMoniker Id="d47d56df-b171-4f1b-8581-efe5e208b7e2" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="d47d56df-b171-4f1b-8581-efe5e208b7e2" name="Repository Implementation" />
+      </childLayers>
+    </layer>
+    <layer Id="9ff4e819-3270-4dc8-8e4c-bf12dbd15dc2" name="Presentation">
+      <childLayers>
+        <layer Id="d08b988f-76f7-4916-9dc0-6689c9d6ac70" name="View Model" />
+        <layer Id="4ac0a4db-689d-4eaa-9617-b92b3564e01f" name="UI Controller">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="49e16009-e37f-4fe4-a1a9-1fa5697592a7" direction="Forward">
+              <layerMoniker Id="d08b988f-76f7-4916-9dc0-6689c9d6ac70" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="3a2566cd-27b6-43d3-9c72-89308585f993" direction="Forward">
+              <layerMoniker Id="7c498cd6-b73b-4e9f-aa1f-a0a6ab7a1567" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="f71a43dc-511b-49bd-9be0-4a5e7c61780f" direction="Forward">
+              <layerMoniker Id="01a2c965-7188-44d8-8d68-6b20a8f2c740" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+        <layer Id="bf73e778-7a83-482e-b546-a3e90a6b4134" name="View">
+          <dependencyToLayers>
+            <dependencyFromLayerToLayer Id="063aa098-96cb-4959-a43b-2cad2d9750e6" direction="Forward">
+              <layerMoniker Id="4ac0a4db-689d-4eaa-9617-b92b3564e01f" />
+            </dependencyFromLayerToLayer>
+            <dependencyFromLayerToLayer Id="4894eea1-1000-44d6-837d-9606ba7effc8" direction="Forward">
+              <layerMoniker Id="d08b988f-76f7-4916-9dc0-6689c9d6ac70" />
+            </dependencyFromLayerToLayer>
+          </dependencyToLayers>
+        </layer>
+      </childLayers>
+    </layer>
+  </layers>
+</layerModel>

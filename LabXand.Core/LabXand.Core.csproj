@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E5B58F8F-B856-4F5D-A29F-736BCEEE1B9D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LabXand.Core</RootNamespace>
+    <AssemblyName>LabXand.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AngleSharp, Version=0.17.1.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.0.17.1\lib\net472\AngleSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="AngleSharp.Css, Version=0.17.0.0, Culture=neutral, PublicKeyToken=e83494dcdc6d31ea, processorArchitecture=MSIL">
+      <HintPath>..\packages\AngleSharp.Css.0.17.0\lib\net472\AngleSharp.Css.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Fasterflect, Version=3.0.0.0, Culture=neutral, PublicKeyToken=38d18473284c1ca7, processorArchitecture=MSIL">
+      <HintPath>..\packages\fasterflect.3.0.0\lib\netstandard20\netstandard20\Fasterflect.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlSanitizer, Version=8.0.0.0, Culture=neutral, PublicKeyToken=61c49a1a9e79cc28, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlSanitizer.8.0.723\lib\net461\HtmlSanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.7.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\StructureMap.4.7.1\lib\net45\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=7.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.7.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Linq.Dynamic, Version=1.0.6132.35681, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Linq.Dynamic.1.0.8\lib\net40\System.Linq.Dynamic.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Text.Encoding.CodePages, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encoding.CodePages.6.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\MultiMap.cs" />
+    <Compile Include="Collections\QuerystringBuilder.cs" />
+    <Compile Include="Collections\ThreadSafeList.cs" />
+    <Compile Include="Collections\TreeNode.cs" />
+    <Compile Include="Compare\EntityComparer.cs" />
+    <Compile Include="Compare\IEntityComparer.cs" />
+    <Compile Include="Criteria\AndCriteria.cs" />
+    <Compile Include="Criteria\Criteria.cs" />
+    <Compile Include="Criteria\NotExistCriteria.cs" />
+    <Compile Include="Criteria\ExistCriteria.cs" />
+    <Compile Include="Criteria\IsNotNullCriteria.cs" />
+    <Compile Include="Criteria\IsNullCriteria.cs" />
+    <Compile Include="Criteria\Extender\CriteriaBuilder.cs" />
+    <Compile Include="Criteria\EqualCriteria.cs" />
+    <Compile Include="Criteria\Extender\CriteriaExtenssion.cs" />
+    <Compile Include="Criteria\GreaterThan.cs" />
+    <Compile Include="Criteria\GreaterThanOrEqual.cs" />
+    <Compile Include="Criteria\LessThan.cs" />
+    <Compile Include="Criteria\LessThanOrEqual.cs" />
+    <Compile Include="Criteria\LikeCriteria.cs" />
+    <Compile Include="Criteria\NotEqualCriteria.cs" />
+    <Compile Include="Criteria\ContainsCriteria.cs" />
+    <Compile Include="Criteria\OrCriteria.cs" />
+    <Compile Include="Criteria\EmptyCriteria.cs" />
+    <Compile Include="ExceptionManagement\DatabaseExceptionHandler.cs" />
+    <Compile Include="ExceptionManagement\DbUpdateExceptionHandler.CS" />
+    <Compile Include="ExceptionManagement\UnHandledExceptionHandler.cs" />
+    <Compile Include="ExceptionManagement\ExceptionBase.cs" />
+    <Compile Include="ExceptionManagement\ExceptionHelper.cs" />
+    <Compile Include="ExceptionManagement\DefaultExceptionHandler.cs" />
+    <Compile Include="ExceptionManagement\CustomExceptionHandlerBase.cs" />
+    <Compile Include="ExceptionManagement\ExceptionHandlerFactory.cs" />
+    <Compile Include="ExceptionManagement\IExceptionHandler.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\ConditionalExpressionBuilderBase.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\ContainsConditionExpressionBuilder.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\IsNotNullConditionExpressionBuilder.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\IsNullConditionExpressionBuilder.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\NotEqualConditionExpressionBuilder.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\LessThanOrEqualConditionExpressionBuilder.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\LessThanConditionExpressionBuilder.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\GreaterThanOrEqualConditionExpressionBuilder.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\GreaterThanConditionExpressionBuilder.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\LikeConditionExpressionBuilder.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\EqualConditionExpressionBuilder.cs" />
+    <Compile Include="Expression\ConditionalExpressionBuilder\IConditionalExpressionBuilder.cs" />
+    <Compile Include="Expression\PredicateRewriterVisitor.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\ConversionExtensions.cs" />
+    <Compile Include="Extensions\DateTimeExtensions.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Expression\ExpressionHelper.cs" />
+    <Compile Include="Expression\ExpressionRewriter.cs" />
+    <Compile Include="Extensions\HtmlTextWriterExtensions.cs" />
+    <Compile Include="Extensions\HttpExtensions.cs" />
+    <Compile Include="Extensions\IOrdered.cs" />
+    <Compile Include="Extensions\LinqExtensions.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\MathExtensions.cs" />
+    <Compile Include="Extensions\MiscExtensions.cs" />
+    <Compile Include="Extensions\StreamExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\TypeDescriptorExtensions.cs" />
+    <Compile Include="Extensions\TypeExtensions.cs" />
+    <Compile Include="Extensions\XmlNodeExtensions.cs" />
+    <Compile Include="Extensions\XmlWriterExtensions.cs" />
+    <Compile Include="Filters\SpecificationOfDataListExtender.cs" />
+    <Compile Include="Filters\SortSpecification.cs" />
+    <Compile Include="Filters\SpecificationOfDataList.cs" />
+    <Compile Include="Filters\FilterOperations.cs" />
+    <Compile Include="Infrastructure\DisposableObject.cs" />
+    <Compile Include="Infrastructure\Enumeration.cs" />
+    <Compile Include="Infrastructure\EnumFriendlyNameAttribute.cs" />
+    <Compile Include="Infrastructure\Error.cs" />
+    <Compile Include="Filters\FilterSpecification.cs" />
+    <Compile Include="Infrastructure\Guard.cs" />
+    <Compile Include="Infrastructure\ICloneable.cs" />
+    <Compile Include="Infrastructure\InvokableClass.cs" />
+    <Compile Include="Infrastructure\IPageable.cs" />
+    <Compile Include="Infrastructure\IPagedList.cs" />
+    <Compile Include="Infrastructure\IPaginated.cs" />
+    <Compile Include="Infrastructure\Misc.cs" />
+    <Compile Include="Infrastructure\Pageable.cs" />
+    <Compile Include="Infrastructure\PagedList.cs" />
+    <Compile Include="Infrastructure\Paginated.cs" />
+    <Compile Include="Infrastructure\RegularExpressions.cs" />
+    <Compile Include="Infrastructure\Singleton.cs" />
+    <Compile Include="Infrastructure\SortDirection.cs" />
+    <Compile Include="Infrastructure\SortItem.cs" />
+    <Compile Include="Infrastructure\SortItemHelper.cs" />
+    <Compile Include="Messaging\MSMQHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilities\ActionDisposable.cs" />
+    <Compile Include="Utilities\StringHelper.cs" />
+    <Compile Include="Utilities\CollectionHelper.cs" />
+    <Compile Include="Utilities\ConfigurationHelper.cs" />
+    <Compile Include="Utilities\DateTimeConvert.cs" />
+    <Compile Include="Utilities\DateTimeHelpers.cs" />
+    <Compile Include="Utilities\DictionaryConverter.cs" />
+    <Compile Include="Utilities\Inflector.cs" />
+    <Compile Include="Utilities\JsonObject.cs" />
+    <Compile Include="Utilities\LinqExpressionHelper.cs" />
+    <Compile Include="Utilities\PersianCalendarHelper.cs" />
+    <Compile Include="Utilities\Prettifier.cs" />
+    <Compile Include="Utilities\Range.cs" />
+    <Compile Include="Utilities\StringTokenizer.cs" />
+    <Compile Include="Utilities\Threading\LockExtensions.cs" />
+    <Compile Include="Utilities\Threading\ReadLockDisposable.cs" />
+    <Compile Include="Utilities\Threading\UpgradeableReadLockDisposable.cs" />
+    <Compile Include="Utilities\Threading\WriteLockDisposable.cs" />
+    <Compile Include="Utilities\TypeHelper.cs" />
+    <Compile Include="Validation\CompositeValidationResult.cs" />
+    <Compile Include="Validation\CustomeDataAnnotation\CustomeRequiredAttribute.cs" />
+    <Compile Include="Validation\ValidateObjectAttribute.cs" />
+    <Compile Include="Validation\ValidationHelper.cs" />
+    <Compile Include="Utilities\Wildcard.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\LabXand.ModelingProject\IMas.VesselFlag.LayerDiagram.layerdiagram">
+      <Link>IMas.VesselFlag.LayerDiagram.layerdiagram</Link>
+      <Visible>False</Visible>
+    </AdditionalFiles>
+    <None Include="App.config" />
+    <Compile Include="Infrastructure\Guard.Partial.cs" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enumeration\" />
+    <Folder Include="Logging\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.11.0\analyzers\dotnet\cs\Microsoft.DependencyValidation.Analyzers.resources.dll" />
+    <Analyzer Include="..\packages\Microsoft.DependencyValidation.Analyzers.0.11.0\analyzers\dotnet\Microsoft.DependencyValidation.Analyzers.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "C:\Libs\"</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

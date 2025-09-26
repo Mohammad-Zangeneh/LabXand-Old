@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="7f593c1b-aa84-48d9-af93-1a0080830020" name="UMLClassDiagram1" linkedPackageId="6944f77a-69cb-4aa5-8e33-91f719cdf274" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <ownedCommentsInternal>
+    <comment Id="7810ef4f-1476-4ccb-9ac4-c10c440bc960">
+      <elementDefinition Id="00404ce0-793a-4bc5-b0ee-848c4cafd49c" />
+      <body>Domain Model</body>
+    </comment>
+    <comment Id="95c185d0-2fc7-465f-98fb-19a1dc34188f">
+      <elementDefinition Id="ed16accb-8791-41e5-9802-f88c61d48492" />
+      <body>کلاس ریپازیتوری برای ارتباط با دیتابیس است</body>
+    </comment>
+    <comment Id="552c9032-c8e7-4e65-80e3-a98ab9943198">
+      <elementDefinition Id="3e01e942-94aa-4b44-89ef-74a2274cb539" />
+      <body>این کلاس برای ارتباط با دنیای بیرون تعریف می شود.</body>
+    </comment>
+    <comment Id="6393c770-e2f6-4c55-a040-9726a72b7980">
+      <elementDefinition Id="22799bf8-5e9c-4577-94f9-65fd8bac11d3" />
+      <body>این کلاس برای تبدیل domain به  dto وبالعکس می باشد</body>
+    </comment>
+    <comment Id="d6f4fdf3-2443-4ad7-bc4c-bd2bd261f803">
+      <elementDefinition Id="db4a6e6b-caa3-4fcd-9b0c-5c71aabbe6cc" />
+      <body> :NullObject کلاس
+با استفاده از الگوی طراحی
+NullObject
+ بجای برگرداندن یک شئی خالی، یک شئی از این کلاس برمیگرداند</body>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e42a8376-3e00-49a0-92ad-6cd0b673ad24" name="ExternalManufacturers" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1593c3a2-72a8-4613-a2aa-e4ad59a7845b" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="41671782-851f-4b58-adbc-d831bf864b14" name="NullExternalManufacturers" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1e7b5e94-93e8-4ae3-ad56-18ff3202e9df" />
+        <generalsInternal>
+          <generalization Id="4aeb9a2e-0445-4571-928e-6eb3f8e3d7d4" isSubstitutable="false">
+            <classMoniker Id="e42a8376-3e00-49a0-92ad-6cd0b673ad24" LastKnownName="ExternalManufacturers" />
+            <elementDefinition Id="8aa53865-a3cf-4d54-a35c-74920b88e091" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c0c0c632-c884-4925-a201-9d5967d22677" name="ExternalManufacturersApplicationService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="74b27d1b-48f1-458d-a681-a64bff3a3092" />
+        <targetEnds>
+          <association Id="065319fb-4848-496b-ac9c-f18952d256c5" isDerived="false" sourceEndRoleName="ExternalManufacturersApplicationService" targetEndRoleName="ExternalManufacturersMapper" isLeaf="false" name="استفاده برای مپ کردن" isAbstract="false">
+            <classMoniker Id="83bd3635-5e0d-4e5d-9f7e-24c0e8d8450a" LastKnownName="ExternalManufacturersMapper" />
+            <description>استفاده برای مپ کردن</description>
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2a387c4a-cd00-4329-91bf-e6aa45527e42" name="ExternalManufacturersApplicationService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e757f797-63cd-4245-a88a-0651d42d56ad" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fbf95b95-e5f4-44c1-9cb9-60c50bd629b3" name="ExternalManufacturersMapper" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="bcf5dd98-cd41-4bd7-8942-fd9e8acde2af" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="affee5b5-6259-4a10-a519-6a8e57063901" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f6c8463f-6a63-43c5-8a24-925df1c3ab04" name="IExternalManufacturersRepository" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8ebdffe0-19cc-4fcc-87d7-050c5a8664d7" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="38018957-4d57-4018-bd0d-60a919caf210" name="ExternalManufacturersDto" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f8c997ae-8f83-4a7e-8169-ecbc112c2542" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c4d95558-1fb3-41e9-a180-7ab70592ee32" name="ExternalManufacturersRepository" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1fb0ef1c-4922-4374-b864-0f8a286c4dd7" />
+        <generalsInternal>
+          <generalization Id="fb0a09d0-c66b-4245-9a6d-5ec654119c21" isSubstitutable="false">
+            <classMoniker Id="f6c8463f-6a63-43c5-8a24-925df1c3ab04" LastKnownName="IExternalManufacturersRepository" />
+            <elementDefinition Id="501933a4-0e8f-4f12-b1a6-296368a6c0f4" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="62ca25c9-a11a-478f-9168-a288791b108b" name="ExternalManufacturersService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0998e455-c348-4251-a7c6-ac38fadf6a10" />
+        <generalsInternal>
+          <generalization Id="443bbce2-494f-487d-a33f-9f53be9d4388" isSubstitutable="false">
+            <classMoniker Id="f4b613d7-8128-4dbb-8091-a068affc5bd7" LastKnownName="IExternalManufacturersService" />
+            <elementDefinition Id="3c34abca-1e4e-4c76-9319-4068dbf34f7d" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="efb5f58d-8cd8-4fda-9440-b6c87d72f38a" isDerived="false" sourceEndRoleName="ExternalManufacturersService" targetEndRoleName="ExternalManufacturers" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e42a8376-3e00-49a0-92ad-6cd0b673ad24" LastKnownName="ExternalManufacturers" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cb612bbd-75da-43d0-9f92-4b3c1cbdaa16" name="ExternalManufacturersService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2ddde371-c9ac-48ce-a20b-83a0ffeb209e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="3928a1a8-918d-40b0-bca5-4f1d60f85cc4" name="ExternalManufacturers" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d54854c0-77ce-48af-b304-4ca0801f342f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="347fb69c-28ab-46d3-8fd2-785cb06d2195" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f4b613d7-8128-4dbb-8091-a068affc5bd7" name="IExternalManufacturersService" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="99ffddc8-d29e-4c82-91ca-db8fac273011" />
+        <targetEnds>
+          <association Id="f692dcd2-d3b5-478d-8e35-712d325384b2" isDerived="false" sourceEndRoleName="IExternalManufacturersService" targetEndRoleName="IExternalManufacturersRepository" isLeaf="false" name="برای ارتباط با دیتا بیس" isAbstract="false">
+            <classMoniker Id="f6c8463f-6a63-43c5-8a24-925df1c3ab04" LastKnownName="IExternalManufacturersRepository" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8930e8d7-88ae-4052-9985-e601460ac17d" name="IExternalManufacturersService" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e7db84ea-103b-4baa-a52d-b7e1752c6753" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f42a96a7-bf43-41c3-a392-f02ba642738a" name="IExternalManufacturersRepository" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9f39bd9f-2123-41af-a193-f22fe136b957" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="272807d2-6181-4b3e-b557-84e6427fbfaf" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="83bd3635-5e0d-4e5d-9f7e-24c0e8d8450a" name="ExternalManufacturersMapper" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0b2c3cb6-fa90-40f5-a4f3-a2a54fe7394e" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="6944f77a-69cb-4aa5-8e33-91f719cdf274" name="LabXand.ModelingProject">
+    <elementDefinition Id="c9180789-9d8e-4834-912d-3cac89a8a014" />
+  </package>
+</logicalClassDesignerModel>

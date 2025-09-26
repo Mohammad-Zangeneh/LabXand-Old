@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="LabXand.DomainLayer.Core.IDomainEntity&lt;TIdentifier&gt;" Collapsed="true">
+    <Position X="5.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAQAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\IDomainEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IDomainEvent" Collapsed="true">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\IDomainEvent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.ITracableEntity&lt;TTraceData, TIdentifier&gt;" Collapsed="true">
+    <Position X="4" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Entity\ITracableEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.ITraceData" Collapsed="true">
+    <Position X="12.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\ITraceData.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IVersioningSupportedEntity&lt;TIdentifier, TMasterIdentifier, TVersion&gt;" Collapsed="true">
+    <Position X="6.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Entity\IVersioningSupportedEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IEventDispatcher" Collapsed="true">
+    <Position X="14.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Event\IEventDispatcher.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IEventHandler" Collapsed="true">
+    <Position X="16" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Event\IEventHandler.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IRepository&lt;TDomain, TIdentifier&gt;" Collapsed="true">
+    <Position X="12.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABAAAAAACBAAAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\IRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IRowRestrictionSpecification&lt;TDomain, TIdentifier&gt;" Collapsed="true">
+    <Position X="14.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Repository\IRowRestrictionSpecification.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.ISecurityEnabledDomainService&lt;TDomain, TRepository, TIdentifier, TUserContext&gt;" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\ISecurityEnabledDomainService.cs</FileName>
+      <NewMemberFileName>Service\IDomainService.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IDomainServiceWithRepository&lt;TDomain, TRepository, TIdentifier&gt;" Collapsed="true">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\IDomainServiceWithRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IReadOnlyDomainService&lt;TDomain, TIdentifier&gt;" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAQAACAIAAACAAAAAAAAEAA=</HashCode>
+      <FileName>Service\IReadOnlyDomainService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IReadOnlyDomainWithRepositoryService&lt;TDomain, TRepository, TIdentifier&gt;" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\IReadOnlyDomainWithRepositoryService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IServiceValidator&lt;TDomain, TIdentifier&gt;" Collapsed="true">
+    <Position X="16" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Service\IServiceValidator.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.ISecurityEnabledReadOnlyService&lt;TDomain, TRepository, TIdentifier, TUserContext&gt;" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\ISecurityEnabledReadOnlyService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.ISecurityEnabledService&lt;TUserContext&gt;" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Service\ISecurityEnabledService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IDomainService&lt;TDomain, TIdentifier&gt;" Collapsed="true">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAACAAAAABEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\IDomainService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="LabXand.DomainLayer.Core.IVersioningSupportedService&lt;TDomain, TIdentifier, TMasterIdentifier, TVersion, TRepository&gt;" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service\IVersioningSupportedService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
